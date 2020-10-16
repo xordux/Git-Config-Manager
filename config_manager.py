@@ -1,6 +1,7 @@
 from typing import Iterable
 import configparser
 import os
+import argparse
 
 
 class config_manager:
@@ -26,5 +27,9 @@ class config_manager:
                 os.system(cmd)
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("profile_name", help="Enter the name of profile you"
+                        " want to apply")
+    args = parser.parse_args()
     cfmgr = config_manager()
-    cfmgr.set_profile("home")
+    cfmgr.set_profile(args.profile_name)

@@ -133,3 +133,6 @@ dmypy.json
 
 # For Git-Config-Manager
 profiles.cfg
+
+# For me
+temp.py
