@@ -26,6 +26,7 @@ class config_manager:
                 print(cmd)
                 os.system(cmd)
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("profile_name", help="Enter the name of profile you"
