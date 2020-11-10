@@ -17,12 +17,12 @@ class config_manager:
 
     def set_profile(self, profile_name):
         for k in self.config[profile_name]:
-            cmd = f"git config --global --unset {k}"
+            cmd = "git config --global --unset %s" % k
             print(cmd)
             os.system(cmd)
             target = self.config[profile_name][k]
             if target != "UNSET":
-                cmd = f"git config --global {k} {target}"
+                cmd = "git config --global %s %s" % (k, target)
                 print(cmd)
                 os.system(cmd)
 
